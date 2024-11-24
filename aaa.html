@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>さいころを振る</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #dice {
+            font-size: 100px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dice">🎲</div>
+    <button onclick="rollDice()">さいころを振る</button>
+    
+    <script>
+        function rollDice() {
+            const result = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('dice').innerText = result;
+        }
+    </script>
+</body>
+</html>
